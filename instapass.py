@@ -61,10 +61,10 @@ def Login(username,password):
             #print("csrf_token: ", csrf_token)
             session_id = cookie_jar['sessionid']
             #print("session_id: ", session_id)
-            print("Login Success and the password is: "+password)
+            print("Password is matching and the password is: "+password)
             return True
         else:
-            print("Login Failed")
+            print("This password is not matching!: "+password)
             return False
     
 username = str(input('Please enter a username: '))
