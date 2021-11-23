@@ -51,7 +51,7 @@ def Login(username,password):
     json_data = json.loads(login_response.text)
     
     if (json_data['status'] == 'fail'): 
-        print("session lost so try after 10 minutes....")
+        print("Session Lost!... So, Try After 10 Minutes....")
         return True
     else:
         if json_data["authenticated"]:
@@ -61,10 +61,10 @@ def Login(username,password):
             #print("csrf_token: ", csrf_token)
             session_id = cookie_jar['sessionid']
             #print("session_id: ", session_id)
-            print("Password is matching and the password is: "+password)
+            print("Password is Matching and the Password is: "+password)
             return True
         else:
-            print("This password is not matching!: "+password)
+            print("This password is not Matching!: "+password)
             return False
     
 username = str(input('Please enter a username: '))
